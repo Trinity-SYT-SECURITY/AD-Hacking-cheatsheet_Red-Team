@@ -153,20 +153,20 @@
 - Get domain policy for another domain
 
 
-```powershell
-
-(Get-DomainPolicy -domain moneycorp.local)."system access"
-(Get-DomainPolicy -domain moneycorp.local)."kerberos policy"
-(Get-DomainPolicy -domain moneycorp.local)."Privilege Rights"
-
-# OR
-
-(Get-DomainPolicy)."KerberosPolicy" #Kerberos tickets info(MaxServiceAge)
-(Get-DomainPolicy)."SystemAccess" #Password policy
-(Get-DomainPolicy).PrivilegeRights #Check your privileges
-#Keep note of the kerberos policy as it will be required while making Golden Tickets with mimikats with the same offsets else it will get blocked by the defenders
-
-```
+	```powershell
+	
+	(Get-DomainPolicy -domain moneycorp.local)."system access"
+	(Get-DomainPolicy -domain moneycorp.local)."kerberos policy"
+	(Get-DomainPolicy -domain moneycorp.local)."Privilege Rights"
+	
+	# OR
+	
+	(Get-DomainPolicy)."KerberosPolicy" #Kerberos tickets info(MaxServiceAge)
+	(Get-DomainPolicy)."SystemAccess" #Password policy
+	(Get-DomainPolicy).PrivilegeRights #Check your privileges
+	#Keep note of the kerberos policy as it will be required while making Golden Tickets with mimikats with the same offsets else it will get blocked by the defenders
+	
+	```
 
   
 - Find the DC Servers in current Domain
